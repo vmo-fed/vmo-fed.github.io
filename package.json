@@ -1,0 +1,24 @@
+{
+  "name": "vmo-fed.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vuepress build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmo-fed/vmo-fed.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmo-fed/vmo-fed.github.io/issues"
+  },
+  "homepage": "https://github.com/vmo-fed/vmo-fed.github.io#readme",
+  "devDependencies": {
+    "vuepress": "^0.10.2"
+  }
+}
