@@ -29,7 +29,7 @@
 首次发布不需要更新版本号，后面修改npm module再次发布需要执行`npm dispatch`更新npm version，然后执行`npm publish`，注意npm包名不能与其他开发者已经发布的包重复，然后过一分钟去npm官网的settings里查看自己的包
 
 ###### 6.全局包 VS 局部包
-上面的包其实是一个局部包，意思是我们不能通过`npm i echodate -g`全局安装，我们重新创建一个文件夹npmModuleDemo，然后执行`npm init -y`生成package.json文件，然后执行npm i echodate -S，如何创建一个全局包？
+上面的包其实是一个局部包，我们重新创建一个文件夹npmModuleDemo，然后执行`npm init -y`生成package.json文件，然后执行npm i echodate -S，如何创建一个全局包？
 
 - 建bin文件夹，建index.js：
 ```javascript
@@ -48,6 +48,7 @@
   },
 ```
 然后执行第4步，这样就可以创建一个全局包。
+总结：创建全局包需要指定文件执行环境，`!/usr/bin/env node`或者其他sh环境，py环境，然后放在`/Users/${ucomputername}/.nvm/versions/node/${node-version}/bin/`下
 ###### 我们来思考下全局包和局部包有何不同？
 - 局部包存在自己项目中的node_module里，在项目外无法调用到
 - 全局包存在与`/Users/${ucomputername}/.nvm/versions/node/${node-version}/bin/`，bin作为一个全局变量，存在于bin下的文件就可以在全局访问到，本地也可以访问到全局npm module，所以我们也可以直接在bin下手动添加一个文件，也是可以作为全局变量调用，这个文件必须要指定文件执行环境，eg：`!/usr/bin/env node`，然后修改文件权限`chomd 777 fileName`。
