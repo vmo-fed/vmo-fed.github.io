@@ -3,6 +3,9 @@
 # abort on errors
 set -e
 
+# build
+npm run build
+
 # copy files from dist
 cp -rf .vuepress/dist/ ./
 

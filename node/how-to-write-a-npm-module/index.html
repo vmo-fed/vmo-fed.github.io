@@ -7,8 +7,8 @@
     <meta name="description" content="">
     
     
-    <link rel="preload" href="/assets/css/2.styles.9a2bc629.css" as="style"><link rel="preload" href="/assets/js/app.edfa7725.js" as="script"><link rel="preload" href="/assets/js/0.e425f6dd.js" as="script"><link rel="prefetch" href="/assets/js/1.68c8f878.js">
-    <link rel="stylesheet" href="/assets/css/2.styles.9a2bc629.css">
+    <link rel="preload" href="/assets/css/2.styles.55470dfd.css" as="style"><link rel="preload" href="/assets/js/app.f79b8db8.js" as="script"><link rel="preload" href="/assets/js/0.4f9ee40c.js" as="script"><link rel="prefetch" href="/assets/js/1.7b21d89c.js">
+    <link rel="stylesheet" href="/assets/css/2.styles.55470dfd.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><!----></div></header><div class="sidebar-mask"></div><div class="sidebar"><!----><!----></div><div class="page"><div class="content"><h1 id="如何发布一个npm-module包"><a href="#如何发布一个npm-module包" aria-hidden="true" class="header-anchor">#</a> 如何发布一个npm module包</h1><h6 id="_1-如何创建并发布一个npm包？"><a href="#_1-如何创建并发布一个npm包？" aria-hidden="true" class="header-anchor">#</a> 1.如何创建并发布一个npm包？</h6><ul><li>注册一个<a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">npm账号<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li>在shell里输入<code>npm login</code>回车，依次输入Username，Password，Email，即可在命令行登录npm</li></ul><h6 id="_2-创建一个文件夹npmmodule，建新文件index-js和package-json"><a href="#_2-创建一个文件夹npmmodule，建新文件index-js和package-json" aria-hidden="true" class="header-anchor">#</a> 2.创建一个文件夹npmModule，建新文件index.js和package.json</h6><div class="language-javascript extra-class"><pre class="language-javascript"><code>  <span class="token keyword">function</span> <span class="token function">echoDate</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -31,7 +31,7 @@
 首次发布不需要更新版本号，后面修改npm module再次发布需要执行`npm dispatch`更新npm version，然后执行`npm publish`，注意npm包名不能与其他开发者已经发布的包重复，然后过一分钟去npm官网的settings里查看自己的包
 
 ###### 6.全局包 VS 局部包
-上面的包其实是一个局部包，意思是我们不能通过`npm i echodate -g`全局安装，我们重新创建一个文件夹npmModuleDemo，然后执行`npm init -y`生成package.json文件，然后执行npm i echodate -S，如何创建一个全局包？
+上面的包其实是一个局部包，我们重新创建一个文件夹npmModuleDemo，然后执行`npm init -y`生成package.json文件，然后执行npm i echodate -S，如何创建一个全局包？
 
 - 建bin文件夹，建index.js：
 ```javascript
@@ -42,8 +42,9 @@ console.log(echoDate(arguments[0]))
 </code></pre></div><p>其中<code>!/usr/bin/env node</code>	表示当前文件执行环境是node，在shell脚本里执行普通js文件需要执行node先切换到node环境，这行代码相当于自动帮我们切到node环境下，然后可以直接调用echoDate。</p><ul><li>在package.json里加上</li></ul><div class="language-javascript extra-class"><pre class="language-javascript"><code>  <span class="token string">&quot;bin&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
     <span class="token string">&quot;echodate&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;./bin/index.js&quot;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-</code></pre></div><p>然后执行第4步，这样就可以创建一个全局包。</p><h6 id="我们来思考下全局包和局部包有何不同？"><a href="#我们来思考下全局包和局部包有何不同？" aria-hidden="true" class="header-anchor">#</a> 我们来思考下全局包和局部包有何不同？</h6><ul><li>局部包存在自己项目中的node_module里，在项目外无法调用到</li><li>全局包存在与<code>/Users/${ucomputername}/.nvm/versions/node/${node-version}/bin/</code>，bin作为一个全局变量，存在于bin下的文件就可以在全局访问到，本地也可以访问到全局npm module，所以我们也可以直接在bin下手动添加一个文件，也是可以作为全局变量调用，这个文件必须要指定文件执行环境，eg：<code>!/usr/bin/env node</code>，然后修改文件权限<code>chomd 777 fileName</code>。
+</code></pre></div><p>然后执行第4步，这样就可以创建一个全局包。
+总结：创建全局包需要指定文件执行环境，<code>!/usr/bin/env node</code>或者其他sh环境，py环境，然后放在<code>/Users/${ucomputername}/.nvm/versions/node/${node-version}/bin/</code>下</p><h6 id="我们来思考下全局包和局部包有何不同？"><a href="#我们来思考下全局包和局部包有何不同？" aria-hidden="true" class="header-anchor">#</a> 我们来思考下全局包和局部包有何不同？</h6><ul><li>局部包存在自己项目中的node_module里，在项目外无法调用到</li><li>全局包存在与<code>/Users/${ucomputername}/.nvm/versions/node/${node-version}/bin/</code>，bin作为一个全局变量，存在于bin下的文件就可以在全局访问到，本地也可以访问到全局npm module，所以我们也可以直接在bin下手动添加一个文件，也是可以作为全局变量调用，这个文件必须要指定文件执行环境，eg：<code>!/usr/bin/env node</code>，然后修改文件权限<code>chomd 777 fileName</code>。
 全局包和本地安装的包是两个完全独立的包，删除一个不会影响另外一个</li></ul><h6 id="npm-link做了什么？"><a href="#npm-link做了什么？" aria-hidden="true" class="header-anchor">#</a> npm link做了什么？</h6><p>npm link在全局的<code>{prefix}/lib/node_modules/&lt;package&gt;</code>目录创建一个symlink映射到npm link命令执行的文件夹下的package，也可以将任何bin里的命令映射到<code>{prefix}/bin/{name}</code> ,这样我们可以在本地边开发边测试我们的npm mudole，这里全局和局部包为同一个包，取消关联用<code>npm unlink {name}</code></p></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
-    <script src="/assets/js/0.e425f6dd.js" defer></script><script src="/assets/js/app.edfa7725.js" defer></script>
+    <script src="/assets/js/0.4f9ee40c.js" defer></script><script src="/assets/js/app.f79b8db8.js" defer></script>
   </body>
 </html>
