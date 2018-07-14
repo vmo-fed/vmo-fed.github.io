@@ -43,7 +43,7 @@ console.log('hello world');
 此时可以和上面shell一样的做法来run起来
 
 ```shell
-chmod ./app.js
+chmod 777 ./app.js
 ./app.js # hello world
 ```
 
