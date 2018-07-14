@@ -49,7 +49,7 @@ chmod 777 ./app.js
 
 > 你也可以把app.js改为app然后./app运行看是否达到预期的结果？
 
-当我们删除首行的!/usr/local/bin/node，再次执行./app.js会提示
+当我们删除首行的\#!/usr/local/bin/node，再次执行./app.js会提示
 
 ![](./error.png)
 
