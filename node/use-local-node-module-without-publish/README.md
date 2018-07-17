@@ -60,10 +60,19 @@ node app.js # hello world
 
 这里我们可以注意到myApp中的greeting-module其实是global及local的引用，修改任意一个都将会改变myApp中的greeting-module
 
-我用到了nvm，进入到 /Users/我的名字/.nvm/versions/node/v9.0.0/lib/node_modules/greeting-module目录下，修改代码如上hello.js的内容
+我用到了nvm，进入到 /Users/guoyaqi/.nvm/versions/node/v9.0.0/lib/node_modules/greeting-module目录下，修改代码如上hello.js的内容
 
 ```shell
 node hello.js # hi world
 ```
 
 > 如果greeting-module依赖其它的本地module，和上面提到的一样，需要到那个module目录npm link，然后到greeting-module目录npm link 那个module即可
+
+如果你希望删除此包
+
+```shell
+npm unlink greeting-module
+```
+
+
+

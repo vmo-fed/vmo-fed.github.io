@@ -7,7 +7,7 @@
     <meta name="description" content="">
     
     
-    <link rel="preload" href="/assets/css/6.styles.d9054f8d.css" as="style"><link rel="preload" href="/assets/js/app.f78ab120.js" as="script"><link rel="preload" href="/assets/js/1.0824ffa3.js" as="script"><link rel="prefetch" href="/assets/js/3.d1661b33.js"><link rel="prefetch" href="/assets/js/0.b3db1a58.js"><link rel="prefetch" href="/assets/js/2.228d2fe1.js"><link rel="prefetch" href="/assets/js/4.1f851714.js"><link rel="prefetch" href="/assets/js/5.1b253d88.js">
+    <link rel="preload" href="/assets/css/6.styles.d9054f8d.css" as="style"><link rel="preload" href="/assets/js/app.6df5f836.js" as="script"><link rel="preload" href="/assets/js/1.0dd734a1.js" as="script"><link rel="prefetch" href="/assets/js/3.d1661b33.js"><link rel="prefetch" href="/assets/js/0.b3db1a58.js"><link rel="prefetch" href="/assets/js/2.228d2fe1.js"><link rel="prefetch" href="/assets/js/4.1f851714.js"><link rel="prefetch" href="/assets/js/5.1b253d88.js">
     <link rel="stylesheet" href="/assets/css/6.styles.d9054f8d.css">
   </head>
   <body>
@@ -21,8 +21,9 @@ npm install ../greeting-module -S
 </code></pre></div><h3 id="方法二：npm-link"><a href="#方法二：npm-link" aria-hidden="true" class="header-anchor">#</a> 方法二：npm link</h3><p>进入到greeting-module目录</p><div class="language-shell extra-class"><pre class="language-text"><code>npm link
 </code></pre></div><p>在log中会提示node_modules全局包生成了greeting-module，并指向了当前的这个greeting-module，我们简称global-&gt;local</p><p>进入到myApp目录</p><div class="language-shell extra-class"><pre class="language-text"><code>npm link greeting-module
 node app.js # hello world
-</code></pre></div><p>在log中提示myApp中的node_modules生成了greeting-module，指向了全局包的greeting-module，我们这里简称myApp-&gt;global-&gt;local。</p><p>这里我们可以注意到myApp中的greeting-module其实是global及local的引用，修改任意一个都将会改变myApp中的greeting-module</p><p>我用到了nvm，进入到 /Users/我的名字/.nvm/versions/node/v9.0.0/lib/node_modules/greeting-module目录下，修改代码如上hello.js的内容</p><div class="language-shell extra-class"><pre class="language-text"><code>node hello.js # hi world
-</code></pre></div><blockquote><p>如果greeting-module依赖其它的本地module，和上面提到的一样，需要到那个module目录npm link，然后到greeting-module目录npm link 那个module即可</p></blockquote></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
-    <script src="/assets/js/1.0824ffa3.js" defer></script><script src="/assets/js/app.f78ab120.js" defer></script>
+</code></pre></div><p>在log中提示myApp中的node_modules生成了greeting-module，指向了全局包的greeting-module，我们这里简称myApp-&gt;global-&gt;local。</p><p>这里我们可以注意到myApp中的greeting-module其实是global及local的引用，修改任意一个都将会改变myApp中的greeting-module</p><p>我用到了nvm，进入到 /Users/guoyaqi/.nvm/versions/node/v9.0.0/lib/node_modules/greeting-module目录下，修改代码如上hello.js的内容</p><div class="language-shell extra-class"><pre class="language-text"><code>node hello.js # hi world
+</code></pre></div><blockquote><p>如果greeting-module依赖其它的本地module，和上面提到的一样，需要到那个module目录npm link，然后到greeting-module目录npm link 那个module即可</p></blockquote><p>如果你希望删除此包</p><div class="language-shell extra-class"><pre class="language-text"><code>npm unlink greeting-module
+</code></pre></div></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
+    <script src="/assets/js/1.0dd734a1.js" defer></script><script src="/assets/js/app.6df5f836.js" defer></script>
   </body>
 </html>

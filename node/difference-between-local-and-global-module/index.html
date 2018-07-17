@@ -7,7 +7,7 @@
     <meta name="description" content="">
     
     
-    <link rel="preload" href="/assets/css/6.styles.d9054f8d.css" as="style"><link rel="preload" href="/assets/js/app.f78ab120.js" as="script"><link rel="preload" href="/assets/js/4.1f851714.js" as="script"><link rel="prefetch" href="/assets/js/3.d1661b33.js"><link rel="prefetch" href="/assets/js/0.b3db1a58.js"><link rel="prefetch" href="/assets/js/1.0824ffa3.js"><link rel="prefetch" href="/assets/js/2.228d2fe1.js"><link rel="prefetch" href="/assets/js/5.1b253d88.js">
+    <link rel="preload" href="/assets/css/6.styles.d9054f8d.css" as="style"><link rel="preload" href="/assets/js/app.6df5f836.js" as="script"><link rel="preload" href="/assets/js/4.1f851714.js" as="script"><link rel="prefetch" href="/assets/js/3.d1661b33.js"><link rel="prefetch" href="/assets/js/0.b3db1a58.js"><link rel="prefetch" href="/assets/js/1.0dd734a1.js"><link rel="prefetch" href="/assets/js/2.228d2fe1.js"><link rel="prefetch" href="/assets/js/5.1b253d88.js">
     <link rel="stylesheet" href="/assets/css/6.styles.d9054f8d.css">
   </head>
   <body>
@@ -24,6 +24,6 @@ console.log('hello world');
 </code></pre></div><blockquote><p>你也可以把app.js改为app然后./app运行看是否达到预期的结果？</p></blockquote><p>当我们删除首行的#!/usr/local/bin/node，再次执行./app.js会提示</p><p><img src="/assets/img/error.723d46a5.png" alt></p><p>这是因为没有指定需要node的解释器来执行，shell只能用默认的bash来执行它，当然会报错了</p><p>我们将包含有#!的app.js拷贝到/usr/local/bin下面</p><div class="language-shell extra-class"><pre class="language-text"><code># 在任何目录下执行下面代码
 app.js # hello world
 </code></pre></div><p>由此来看在node中，全局安装的包其实就是在头部指定了是node环境，然后把它copy到了/usr/local/bin下，这样我们就可以使用命令行在任何目录下去执行它了。</p><p>而局部包是我们希望引入到js工程中去的（require），所以头部无需指定node环境。</p><p>当然我们也可以全局包安装到某个工程里（如果全局和本地工程适用此npm 包的版本不用），然后在npm script中去使用，由于npm script中是会先从工程的node_module去找对应的包，所以npm run xxx是指定的局部包的版本，而不是全局。</p></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
-    <script src="/assets/js/4.1f851714.js" defer></script><script src="/assets/js/app.f78ab120.js" defer></script>
+    <script src="/assets/js/4.1f851714.js" defer></script><script src="/assets/js/app.6df5f836.js" defer></script>
   </body>
 </html>
