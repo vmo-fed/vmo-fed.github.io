@@ -21,7 +21,7 @@
   export default eventObj; // 如果没有用打包工具起项目，记得添加在package.json里babel-cli
 
 // A 组件
-  eventObj.on('milkTea', (const { customer, milkName } = data) => { // 买奶茶啦
+  eventObj.on('milkTea', ({ customer, milkName }) => { // 买奶茶啦
     console.log(`${customer} 需要一杯 ${milkName}`);
   });
 // B 组件
@@ -58,3 +58,5 @@ window.eventObj = {
 ```
 
 同理使用let定义也是不可以的。
+
+[在线DEMO](https://codesandbox.io/s/o77xm2pj76)

@@ -22,7 +22,7 @@
   }
 
   // 使用
-  eventObj.on('milkTea', (const { customer, milkName } = data) => { // 买奶茶啦
+  eventObj.on('milkTea', ({ customer, milkName }) => { // 买奶茶啦
     console.log(`${customer} 需要一杯 ${milkName}`);
   });
   setTimeout(() => {
