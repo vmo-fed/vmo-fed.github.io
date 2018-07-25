@@ -7,7 +7,7 @@
     <meta name="description" content="">
     
     
-    <link rel="preload" href="/assets/css/8.styles.db6db34b.css" as="style"><link rel="preload" href="/assets/js/app.3fc895f0.js" as="script"><link rel="preload" href="/assets/js/2.31796700.js" as="script"><link rel="prefetch" href="/assets/js/0.ccb27486.js"><link rel="prefetch" href="/assets/js/1.39f97e90.js"><link rel="prefetch" href="/assets/js/3.308e149d.js"><link rel="prefetch" href="/assets/js/4.c33e05bd.js"><link rel="prefetch" href="/assets/js/5.07093911.js"><link rel="prefetch" href="/assets/js/6.ce3d9e32.js"><link rel="prefetch" href="/assets/js/7.8da938b1.js">
+    <link rel="preload" href="/assets/css/8.styles.db6db34b.css" as="style"><link rel="preload" href="/assets/js/app.96f54452.js" as="script"><link rel="preload" href="/assets/js/2.31796700.js" as="script"><link rel="prefetch" href="/assets/js/0.9b773043.js"><link rel="prefetch" href="/assets/js/1.39f97e90.js"><link rel="prefetch" href="/assets/js/3.308e149d.js"><link rel="prefetch" href="/assets/js/4.c33e05bd.js"><link rel="prefetch" href="/assets/js/5.07093911.js"><link rel="prefetch" href="/assets/js/6.ce3d9e32.js"><link rel="prefetch" href="/assets/js/7.8da938b1.js">
     <link rel="stylesheet" href="/assets/css/8.styles.db6db34b.css">
   </head>
   <body>
@@ -24,6 +24,6 @@ node app.js # hello world
 </code></pre></div><p>在log中提示myApp中的node_modules生成了greeting-module，指向了全局包的greeting-module，我们这里简称myApp-&gt;global-&gt;local。</p><p>这里我们可以注意到myApp中的greeting-module其实是global及local的引用，修改任意一个都将会改变myApp中的greeting-module</p><p>我用到了nvm，进入到 /Users/guoyaqi/.nvm/versions/node/v9.0.0/lib/node_modules/greeting-module目录下，修改代码如上hello.js的内容</p><div class="language-shell extra-class"><pre class="language-text"><code>node hello.js # hi world
 </code></pre></div><blockquote><p>如果greeting-module依赖其它的本地module，和上面提到的一样，需要到那个module目录npm link，然后到greeting-module目录npm link 那个module即可</p></blockquote><p>如果你希望删除此包</p><div class="language-shell extra-class"><pre class="language-text"><code>npm unlink greeting-module
 </code></pre></div></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
-    <script src="/assets/js/2.31796700.js" defer></script><script src="/assets/js/app.3fc895f0.js" defer></script>
+    <script src="/assets/js/2.31796700.js" defer></script><script src="/assets/js/app.96f54452.js" defer></script>
   </body>
 </html>
