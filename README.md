@@ -14,3 +14,5 @@
 ### SPA路由
 
 * [实现单页应用路由：hash](/spa-router/implement-spa-router-with-hash/)
+* [实现单页应用路由：history](/spa-router/implement-spa-router-with-history/)
+
