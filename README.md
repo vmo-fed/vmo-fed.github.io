@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # Hello 明略
 
 ### node
@@ -15,4 +19,3 @@
 
 * [实现单页应用路由：hash](/spa-router/implement-spa-router-with-hash/)
 * [实现单页应用路由：history](/spa-router/implement-spa-router-with-history/)
-
