@@ -1,5 +1,19 @@
 # Fragments
+背景：我们的React组件需要一个父元素包裹子元素，否则页面会报错，但是这样会生成额外的DOM节点，而Fragment解决了这个问题
 
+常规的react组件的写法
+
+```javascript
+  function renderApp() {
+    return (
+      <div>
+        <div>item1</div>
+        <div>item2</div>
+        <div>item3</div>
+      </div>
+    )
+  }
+```
 ###### 什么是Fragments？
 
 Fragments是React中的一个属性，react 16 +支持，常用的写法如下：
@@ -71,3 +85,36 @@ render() {
 }
 ```
 这种写法不太友好，可扩展性差，不推荐使用
+
+##### Fragment的典型使用场景
+```javascript
+  import React, { Fragment } from "react";
+  class Lists extends Component {
+    render() {
+      return (
+        <Fragment>
+          <li>hello</li>
+          <li>world</li>
+        </Fragment>
+      )
+    }
+  }
+
+  class RenderTable extends Component {
+    render() {
+      return (
+        <ul>
+          <Lists />
+        </ul>
+      )
+    }
+  }
+```
+
+```html
+  <!-- 渲染出来的DOM结构 -->
+  <ul>
+    <li>hello</li>
+    <li>world</li>
+  </ul>
+```
