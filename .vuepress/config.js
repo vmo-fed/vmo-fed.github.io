@@ -25,6 +25,12 @@ module.exports = {
         '/spa-router/implement-spa-router-with-hash/',
         '/spa-router/implement-spa-router-with-history/'
       ]
+    }, {
+      title: 'React',
+      collapsable: true,
+      children: [
+        '/react/react-Fragments/',
+      ]
     }]
   }
 }
