@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>快速进入刚创建的目录</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/10.styles.e96a352e.css" as="style"><link rel="preload" href="/assets/js/app.a1e2fd97.js" as="script"><link rel="preload" href="/assets/js/2.14f85abb.js" as="script"><link rel="prefetch" href="/assets/js/0.b53802cf.js"><link rel="prefetch" href="/assets/js/1.311a7e66.js"><link rel="prefetch" href="/assets/js/3.f8b02806.js"><link rel="prefetch" href="/assets/js/4.acb95b6f.js"><link rel="prefetch" href="/assets/js/5.f42437db.js"><link rel="prefetch" href="/assets/js/6.f2c4676e.js"><link rel="prefetch" href="/assets/js/7.ef3c6f79.js"><link rel="prefetch" href="/assets/js/8.8330a804.js"><link rel="prefetch" href="/assets/js/9.38761a1f.js">
+    <link rel="stylesheet" href="/assets/css/10.styles.e96a352e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>node</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>设计模式</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>SPA路由</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>React</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Shell</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/shell/how-to-go-to-directory-created-just-now/" class="active sidebar-link">快速进入刚创建的目录</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul></div><div class="page"><div class="content"><h1 id="快速进入刚创建的目录"><a href="#快速进入刚创建的目录" aria-hidden="true" class="header-anchor">#</a> 快速进入刚创建的目录</h1><p>在开发中经常会创建一个目录并进入到此目录中，我一般使用</p><div class="language-shell extra-class"><pre class="language-text"><code>mkdir my-directory
+cd my-directory
+</code></pre></div><p>如果使用一条命令则</p><div class="language-shell extra-class"><pre class="language-text"><code>mkdir my-directory &amp;&amp; cd my-directory
+# 或者
+mkdir my-directory;cd my-directory
+</code></pre></div><p>看起来也ok，但如果能再减少一些命令，那我们的开发效率会更高！这里介绍三种方式</p><h3 id="使用"><a href="#使用" aria-hidden="true" class="header-anchor">#</a> 使用$_</h3><div class="language-shell extra-class"><pre class="language-text"><code>mkdir my-directory &amp;&amp; cd $_
+</code></pre></div><h3 id="使用shell-script"><a href="#使用shell-script" aria-hidden="true" class="header-anchor">#</a> 使用shell script</h3><p>创建mkdirandcd.sh如下内容</p><div class="language-shell extra-class"><pre class="language-text"><code># mkdirandcd.sh
+mkdir $1
+cd $1
+</code></pre></div><p>给此文件加权限并执行下面命令</p><div class="language-shell extra-class"><pre class="language-text"><code>. ./mkdirandcd.sh my-directory
+</code></pre></div><h3 id="使用函数"><a href="#使用函数" aria-hidden="true" class="header-anchor">#</a> 使用函数</h3><p>在.bashrc中添加</p><div class="language-shell extra-class"><pre class="language-text"><code>function mkdirandcd(){ mkdir $1 &amp;&amp; cd $1 }
+</code></pre></div><p>并使其生效</p><div class="language-shell extra-class"><pre class="language-text"><code>source ~/.bashrc
+mkdirandcd my-directory
+</code></pre></div></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/react/react-Fragments/" class="prev">
+          Fragments
+        </a></span><!----></p></div></div></div></div>
+    <script src="/assets/js/2.14f85abb.js" defer></script><script src="/assets/js/app.a1e2fd97.js" defer></script>
+  </body>
+</html>

@@ -31,6 +31,12 @@ module.exports = {
       children: [
         '/react/react-Fragments/',
       ]
+    }, {
+      title: 'Shell',
+      collapsable: true,
+      children: [
+        '/shell/how-to-go-to-directory-created-just-now/',
+      ]
     }]
   }
 }

@@ -22,3 +22,6 @@ sidebar: false
 
 ### React
 * [Fragment](/react/react-Fragments/)
+
+### Shell
+* [快速进入刚创建的目录](/shell/how-to-go-to-directory-created-just-now/)
