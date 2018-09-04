@@ -25,3 +25,6 @@ sidebar: false
 
 ### Shell
 * [快速进入刚创建的目录](/shell/how-to-go-to-directory-created-just-now/)
+
+### Parcel
+* [使用pacle build显示console.log内容](/parcel/stay-console.log-after-build/)

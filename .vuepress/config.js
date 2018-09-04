@@ -37,6 +37,12 @@ module.exports = {
       children: [
         '/shell/how-to-go-to-directory-created-just-now/',
       ]
+    }, {
+      title: 'Parcel',
+      collapsable: true,
+      children: [
+        '/parcel/stay-console.log-after-build/',
+      ]
     }]
   }
 }
