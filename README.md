@@ -9,7 +9,7 @@ sidebar: false
 * [如何写一个npm module](/node/how-to-write-a-npm-module/)
 * [局部包和全局包的区别](/node/difference-between-local-and-global-module/)
 * [快速使用本地的node module](/node/use-local-node-module-without-publish/)
-* [如何用实现命令行工具](/node/write-node-tool/)
+* [如何用node实现命令行工具](/node/write-node-tool/)
 
 ### 设计模式
 
