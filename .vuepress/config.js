@@ -9,7 +9,8 @@ module.exports = {
       children: [
         '/node/how-to-write-a-npm-module/',
         '/node/difference-between-local-and-global-module/',
-        '/node/use-local-node-module-without-publish/'
+        '/node/use-local-node-module-without-publish/',
+        '/node/write-node-tool/'
       ]
     }, {
       title: '设计模式',
