@@ -30,4 +30,22 @@
  ```
  - 我们想直接在命令行运行script.js，这样看起来像一个完整的命令，执行后报错
  ![img](./2.png)
+
  这里我们要清楚一点：可以直接在命令行里执行的命令是因为我们把它放在了/usr/local/bin/目录下，我们可以尝试手动复制script.js到bin下，执行script.js，可以正常执行，所以我们的思路就是想办法把script.js命令和环境变量管理起来，在命令行里面执行：`ln script.js /usr/local/bin/script`，这行命令是将script.js复制到bin下为script。
+
+ 3. `script`阶段
+  我们创建一个package.json文件，并添加下列代码
+  ```javascript
+  "bin": {
+    "my-script": "./script.js"
+  },
+  ```
+  然后在命令行输入npm link,出现
+  ![img](./3.png)
+  我们可以在node/xxx/bin/下看见myscript文件
+  ![img](./4.png)
+  此时我们在任何地方都可以执行my-script命令
+
+  以上3步可以简单的实现一个命令行工具。
+
+  删除命令行工具：`npm unlink`

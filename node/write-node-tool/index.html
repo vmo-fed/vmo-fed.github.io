@@ -7,7 +7,7 @@
     <meta name="description" content="">
     
     
-    <link rel="preload" href="/assets/css/12.styles.a0434713.css" as="style"><link rel="preload" href="/assets/js/app.900d25d8.js" as="script"><link rel="preload" href="/assets/js/5.af7dee09.js" as="script"><link rel="prefetch" href="/assets/js/2.2ff272a4.js"><link rel="prefetch" href="/assets/js/0.ffb358f4.js"><link rel="prefetch" href="/assets/js/1.97237524.js"><link rel="prefetch" href="/assets/js/3.149c4bff.js"><link rel="prefetch" href="/assets/js/4.05e4207b.js"><link rel="prefetch" href="/assets/js/6.a9798635.js"><link rel="prefetch" href="/assets/js/7.25ec89ee.js"><link rel="prefetch" href="/assets/js/8.b98e0f18.js"><link rel="prefetch" href="/assets/js/9.a17161ca.js"><link rel="prefetch" href="/assets/js/10.5f9fa35e.js"><link rel="prefetch" href="/assets/js/11.5c0c52d8.js">
+    <link rel="preload" href="/assets/css/12.styles.a0434713.css" as="style"><link rel="preload" href="/assets/js/app.49663977.js" as="script"><link rel="preload" href="/assets/js/5.8f4ff283.js" as="script"><link rel="prefetch" href="/assets/js/1.e2740073.js"><link rel="prefetch" href="/assets/js/0.99cb046d.js"><link rel="prefetch" href="/assets/js/2.a20a70d4.js"><link rel="prefetch" href="/assets/js/3.b4e8f65d.js"><link rel="prefetch" href="/assets/js/4.e44d79b2.js"><link rel="prefetch" href="/assets/js/6.60f6669f.js"><link rel="prefetch" href="/assets/js/7.55ed3787.js"><link rel="prefetch" href="/assets/js/8.96ac15ff.js"><link rel="prefetch" href="/assets/js/9.14991737.js"><link rel="prefetch" href="/assets/js/10.f82e1c9d.js"><link rel="prefetch" href="/assets/js/11.248839f8.js">
     <link rel="stylesheet" href="/assets/css/12.styles.a0434713.css">
   </head>
   <body>
@@ -17,8 +17,15 @@
 这是因为脚本默认的执行环境是shell，shell里没有<code>console.log</code>，需要我们指定脚本的执行环境，修改后的script.js</li></ul><div class="language-javascript extra-class"><pre class="language-javascript"><code>#<span class="token operator">!</span><span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>bin<span class="token operator">/</span>node
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi, node tool'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre></div><ul><li>我们想直接在命令行运行script.js，这样看起来像一个完整的命令，执行后报错
-<img src="/assets/img/2.fa1f790c.png" alt="img">
-这里我们要清楚一点：可以直接在命令行里执行的命令是因为我们把它放在了/usr/local/bin/目录下，我们可以尝试手动复制script.js到bin下，执行script.js，可以正常执行，所以我们的思路就是想办法把script.js命令和环境变量管理起来，在命令行里面执行：<code>ln script.js /usr/local/bin/script</code>，这行命令是将script.js复制到bin下为script。</li></ul></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
-    <script src="/assets/js/5.af7dee09.js" defer></script><script src="/assets/js/app.900d25d8.js" defer></script>
+<img src="/assets/img/2.fa1f790c.png" alt="img"></li></ul><p>这里我们要清楚一点：可以直接在命令行里执行的命令是因为我们把它放在了/usr/local/bin/目录下，我们可以尝试手动复制script.js到bin下，执行script.js，可以正常执行，所以我们的思路就是想办法把script.js命令和环境变量管理起来，在命令行里面执行：<code>ln script.js /usr/local/bin/script</code>，这行命令是将script.js复制到bin下为script。</p><ol start="3"><li><code>script</code>阶段
+我们创建一个package.json文件，并添加下列代码</li></ol><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token string">&quot;bin&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;my-script&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;./script.js&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>然后在命令行输入npm link,出现
+<img src="/assets/img/3.3231c8ab.png" alt="img">
+我们可以在node/xxx/bin/下看见myscript文件
+<img src="/assets/img/4.8f5516b2.png" alt="img">
+此时我们在任何地方都可以执行my-script命令</p><p>以上3步可以简单的实现一个命令行工具。</p><p>删除命令行工具：<code>npm unlink</code></p></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
+    <script src="/assets/js/5.8f4ff283.js" defer></script><script src="/assets/js/app.49663977.js" defer></script>
   </body>
 </html>
