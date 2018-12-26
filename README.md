@@ -34,4 +34,7 @@ sidebar: false
 * [js基础知识](/javascript/js/)
 
 ### git版本控制器常见命令
+* [版本控制器介绍以及git安装配置](/git/git-history-plugin/)
+* [创建git文件](/git/find-or-create-ssh/)
+* [如何生成ssh以及查看ssh](/git/find-or-create-ssh/)
 * [如何生成ssh以及查看ssh](/git/find-or-create-ssh/)

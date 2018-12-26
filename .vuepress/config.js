@@ -50,6 +50,14 @@ module.exports = {
       children: [
         '/javascript/js/',
       ]
+    }, {
+      title: 'git',
+      collapsable: true,
+      children: [
+        '/git/git-history-plugin',
+        '/git/git-start',
+        '/git/git-history-plugin',
+      ]
     }]
   }
 }
