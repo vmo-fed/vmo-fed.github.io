@@ -29,3 +29,6 @@ sidebar: false
 
 ### Parcel
 * [使用pacle build显示console.log内容](/parcel/stay-console.log-after-build/)
+
+### js基础
+* [js基础知识](/javascript/js/)

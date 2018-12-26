@@ -44,6 +44,12 @@ module.exports = {
       children: [
         '/parcel/stay-console.log-after-build/',
       ]
+    }, {
+      title: 'javascript',
+      collapsable: true,
+      children: [
+        '/javascript/js/',
+      ]
     }]
   }
 }
