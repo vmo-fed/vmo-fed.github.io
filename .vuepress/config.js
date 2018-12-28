@@ -59,7 +59,9 @@ module.exports = {
         '/git/delete-file/',
         '/git/merge-rebase/',
         '/git/hard-soft/',
-        '/git/push-http-ssh/',      ]
+        '/git/push-http-ssh/',
+        '/git/pages/',
+      ]
     }]
   }
 }
