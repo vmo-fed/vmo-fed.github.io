@@ -213,9 +213,10 @@ class Car {
     return Object.assign({}, {color, price});
   }
   static comparePrice(car1, car2) {
-    return (car1.price - car2.price);
+    console.log(car1.price - car2.price);
   }
 }
+
 ```
 ```javascript
   class Car {

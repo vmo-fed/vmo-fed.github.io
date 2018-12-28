@@ -3,21 +3,48 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>git系列教程二</title>
+    <title>git教程一：新建git以及提交</title>
     <meta name="description" content="">
     
     
-    <link rel="preload" href="/assets/css/16.styles.ca592759.css" as="style"><link rel="preload" href="/assets/js/app.22eb4fc0.js" as="script"><link rel="preload" href="/assets/js/12.37cef6bd.js" as="script"><link rel="prefetch" href="/assets/js/0.e84d8f35.js"><link rel="prefetch" href="/assets/js/1.ba0a0260.js"><link rel="prefetch" href="/assets/js/2.4b47b338.js"><link rel="prefetch" href="/assets/js/3.771c3fc4.js"><link rel="prefetch" href="/assets/js/4.4d003caa.js"><link rel="prefetch" href="/assets/js/5.200c8b31.js"><link rel="prefetch" href="/assets/js/6.02134f31.js"><link rel="prefetch" href="/assets/js/7.89ab6b15.js"><link rel="prefetch" href="/assets/js/8.f6162b26.js"><link rel="prefetch" href="/assets/js/9.0bfc743e.js"><link rel="prefetch" href="/assets/js/10.98a11bc6.js"><link rel="prefetch" href="/assets/js/11.34dda194.js"><link rel="prefetch" href="/assets/js/13.0e893d40.js"><link rel="prefetch" href="/assets/js/14.5cb599db.js"><link rel="prefetch" href="/assets/js/15.f93f597a.js">
-    <link rel="stylesheet" href="/assets/css/16.styles.ca592759.css">
+    <link rel="preload" href="/assets/css/18.styles.af3bc3bf.css" as="style"><link rel="preload" href="/assets/js/app.c997f5c5.js" as="script"><link rel="preload" href="/assets/js/13.dba9ca49.js" as="script"><link rel="prefetch" href="/assets/js/0.832e0ea0.js"><link rel="prefetch" href="/assets/js/1.99352739.js"><link rel="prefetch" href="/assets/js/2.d54425ae.js"><link rel="prefetch" href="/assets/js/3.39b05c88.js"><link rel="prefetch" href="/assets/js/4.b4429389.js"><link rel="prefetch" href="/assets/js/5.5bc21432.js"><link rel="prefetch" href="/assets/js/6.335774ce.js"><link rel="prefetch" href="/assets/js/7.17293790.js"><link rel="prefetch" href="/assets/js/8.edd37cf1.js"><link rel="prefetch" href="/assets/js/9.632c504c.js"><link rel="prefetch" href="/assets/js/10.9f91ff0f.js"><link rel="prefetch" href="/assets/js/11.73cbff1e.js"><link rel="prefetch" href="/assets/js/12.c3151bc5.js"><link rel="prefetch" href="/assets/js/14.525f374b.js"><link rel="prefetch" href="/assets/js/15.fe1913c6.js"><link rel="prefetch" href="/assets/js/16.ade9bb3e.js"><link rel="prefetch" href="/assets/js/17.2f31bbee.js">
+    <link rel="stylesheet" href="/assets/css/18.styles.af3bc3bf.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>node</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>设计模式</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>SPA路由</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>React</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Shell</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Parcel</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>javascript</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>git</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/git/git-history-plugin/" class="sidebar-link">git系列教程一</a></li><li><a href="/git/git-start/" class="active sidebar-link">git系列教程二</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul></div><div class="page"><div class="content"><h3 id="git系列教程二"><a href="#git系列教程二" aria-hidden="true" class="header-anchor">#</a> git系列教程二</h3><h4 id="创建一个git项目"><a href="#创建一个git项目" aria-hidden="true" class="header-anchor">#</a> 创建一个git项目</h4><div class="language-shell extra-class"><pre class="language-text"><code>$ mkdir gitDemo
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>node</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>设计模式</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>SPA路由</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>React</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Shell</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Parcel</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>javascript</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>git</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/git/git-start/" class="active sidebar-link">git教程一：新建git以及提交</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/git/delete-file/" class="sidebar-link">git教程二：删除项目</a></li><li><a href="/git/merge-rebase/" class="sidebar-link">git教程三：合并分支的两种方式</a></li></ul></div></li></ul></div><div class="page"><div class="content"><h3 id="git教程一：新建git以及提交"><a href="#git教程一：新建git以及提交" aria-hidden="true" class="header-anchor">#</a> git教程一：新建git以及提交</h3><h4 id="创建一个git项目"><a href="#创建一个git项目" aria-hidden="true" class="header-anchor">#</a> 创建一个git项目</h4><div class="language-Shell extra-class"><pre class="language-text"><code>$ mkdir gitDemo
 $ cd gitDemo
 $ git init
-</code></pre></div></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
-        ← <a href="/git/git-history-plugin/" class="prev">
-          git系列教程一
-        </a></span><!----></p></div></div></div></div>
-    <script src="/assets/js/12.37cef6bd.js" defer></script><script src="/assets/js/app.22eb4fc0.js" defer></script>
+</code></pre></div><p>会在gitDemo下创建一个.git文件，
+<img src="/assets/img/1.c917da1b.png" alt="img"></p><h4 id="添加文件并推文件到仓库"><a href="#添加文件并推文件到仓库" aria-hidden="true" class="header-anchor">#</a> 添加文件并推文件到仓库</h4><p>首先，我们要明白git是有三个区，分别为工作区，暂存区和版本</p><div class="language-Shell extra-class"><pre class="language-text"><code>$ touch 1.txt
+</code></pre></div><p>添加内容<code>this is 1</code>，此时1.txt还在我们本地，这个区我们称为工作区</p><p>git status是查看文件状态的，1.txt变成红色
+<img src="/assets/img/2.515049cc.png" alt="img"></p><p>接下来提交到暂存区</p><div class="language-Shell extra-class"><pre class="language-text"><code>$ git add 1.txt
+$ git status
+</code></pre></div><p>1.txt变成绿色，表示
+<img src="/assets/img/3.41869b55.png" alt="img"></p><p>接下来提交到版本</p><div class="language-Shell extra-class"><pre class="language-text"><code>$ git commit -m 'init 1.txt'
+$ git status
+</code></pre></div><p><img src="/assets/img/7.41cf075c.png" alt="img"></p><p>逆向操作，从版本到暂存区，使用</p><div class="language-Shell extra-class"><pre class="language-text"><code>$ git reset HEAD 1.txt
+$ git status
+</code></pre></div><p>1.txt变成红色,表示回到工作区
+<img src="/assets/img/4.9c9377b0.png" alt="img">
+从工作区撤销更改，使用</p><div class="language-Shell extra-class"><pre class="language-text"><code>$ git checkout 1.txt
+$ git status
+</code></pre></div><p><img src="/assets/img/5.64d2cc07.png" alt="img">
+我们发现1.txt中增加的2已经没有了，回到了第一次提交的状态</p><p>版本是什么状态呢？执行git log如下
+<img src="/assets/img/6.e4ce1b20.png" alt="img">
+5066b3dfdb08e43d3e56cc7ca9658e5a13597d69就是版本号
+版本是.git文件，不要修改这个文件。
+(HEAD -&gt; master)HEAD是指针，指向master，master是git为我们创建的分支。
+我们提交到版本，还没有推到远程。但是我们发现自己提交了一条错误的修改到版本，必须撤销这次修改，
+使用<code>git reset --hard HEAD^</code>表示回到前一次提交
+使用<code>git reset --hard xxx</code>表示回到版本号为xxx的这次提交
+执行git log发现日志最新的就是xxx这次版本的提交。</p><p>git diff可以用来帮我们看修改内容</p><p>tips：如果一个文件不是第一次add，可以使用<code>git commit -a -m 'add 3 to 1.txt'</code>，将add 和commit命令合并，直接将文件提交到版本</p><p>思考：为什么我们需要三个区，为什么不能直接从工作区到版本。
+我们可以将工作区理解成本地开发环境，暂存区是测试环境，版本是生产环境，有些文件只想在本地并不想直接发生产，所以我们可以将需要提交的文件放到测试环境，测试成功后将代码放在生产环境。一句话总结：工作区可以随便修改，暂存区放我们只想提交到版本的文件。</p><p>不想提交到git的文件还可以使用.gitignore文件。</p><p>如果我们一不小心commit的时候提交的文案写错了，我们可以执行<code>git commit --amend</code>修改</p></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/javascript/js/" class="prev">
+          contructor
+        </a></span><span class="next"><a href="/git/delete-file/">
+          git教程二：删除项目
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/assets/js/13.dba9ca49.js" defer></script><script src="/assets/js/app.c997f5c5.js" defer></script>
   </body>
 </html>
