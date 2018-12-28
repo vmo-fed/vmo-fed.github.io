@@ -34,6 +34,7 @@ sidebar: false
 * [js基础知识](/javascript/js/)
 
 ### git版本控制器常见命令
+* [git教程前言](/git/git-history-plugin/)
 * [git教程一：新建git以及提交](/git/git-start/)
 * [git教程二：删除项目](/git/delete-file/)
 * [git教程三：合并分支的两种方式](/git/merge-rebase/)

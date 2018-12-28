@@ -54,11 +54,12 @@ module.exports = {
       title: 'git',
       collapsable: true,
       children: [
+        '/git/git-history-plugin/',
         '/git/git-start/',
         '/git/delete-file/',
         '/git/merge-rebase/',
         '/git/hard-soft/',
-      ]
+        '/git/push-http-ssh/',      ]
     }]
   }
 }
