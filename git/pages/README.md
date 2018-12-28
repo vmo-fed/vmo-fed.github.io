@@ -38,3 +38,19 @@
   1. 已有仓库点击新建
   ![img](./6.png)
   2. 创建index.html
+
+#### git + hexo搭建博客
+```Shell
+$ npm i -g hexo
+$ mkdir hexo-blog
+$ cd hexo-blog
+$ hexo init
+$ hexo s
+$ hexo d
+$ hexo new xxx
+$ hexo d
+```
+`hexo init`初始化hexo
+`hexo s`启动本地服务
+`hexo d`编译上线
+`hexo new xxx`生成新的文件
