@@ -34,7 +34,7 @@ sidebar: false
 * [js基础知识](/javascript/js/)
 
 ### git版本控制器常见命令
-* [版本控制器介绍以及git安装配置](/git/git-start/)
-* [创建git文件](/git/delete-file/)
-* [如何生成ssh以及查看ssh](/git/find-or-create-ssh/)
-* [如何生成ssh以及查看ssh](/git/find-or-create-ssh/)
+* [git教程一：新建git以及提交](/git/git-start/)
+* [git教程二：删除项目](/git/delete-file/)
+* [git教程三：合并分支的两种方式](/git/merge-rebase/)
+* [git教程四：hard 和 soft](/git/hard-soft/)

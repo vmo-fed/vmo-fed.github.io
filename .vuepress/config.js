@@ -57,6 +57,7 @@ module.exports = {
         '/git/git-start/',
         '/git/delete-file/',
         '/git/merge-rebase/',
+        '/git/hard-soft/',
       ]
     }]
   }

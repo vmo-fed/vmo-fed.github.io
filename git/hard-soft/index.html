@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git教程四：hard 和 soft</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/19.styles.f52287cc.css" as="style"><link rel="preload" href="/assets/js/app.d1770878.js" as="script"><link rel="preload" href="/assets/js/13.58ceeb45.js" as="script"><link rel="prefetch" href="/assets/js/0.a1f4178a.js"><link rel="prefetch" href="/assets/js/1.aa7dabba.js"><link rel="prefetch" href="/assets/js/2.c37b0e16.js"><link rel="prefetch" href="/assets/js/3.fe07ebbd.js"><link rel="prefetch" href="/assets/js/4.21131fc0.js"><link rel="prefetch" href="/assets/js/5.be5879f5.js"><link rel="prefetch" href="/assets/js/6.7764b4a2.js"><link rel="prefetch" href="/assets/js/7.09c6b1d8.js"><link rel="prefetch" href="/assets/js/8.f1da93d6.js"><link rel="prefetch" href="/assets/js/9.26b544a7.js"><link rel="prefetch" href="/assets/js/10.8d3437ed.js"><link rel="prefetch" href="/assets/js/11.1c6d377a.js"><link rel="prefetch" href="/assets/js/12.68309bac.js"><link rel="prefetch" href="/assets/js/14.1d51270e.js"><link rel="prefetch" href="/assets/js/15.9c205625.js"><link rel="prefetch" href="/assets/js/16.e6a7d51a.js"><link rel="prefetch" href="/assets/js/17.a72d303c.js"><link rel="prefetch" href="/assets/js/18.91d5341f.js">
+    <link rel="stylesheet" href="/assets/css/19.styles.f52287cc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>node</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>设计模式</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>SPA路由</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>React</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Shell</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Parcel</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>javascript</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>git</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/git/git-start/" class="sidebar-link">git教程一：新建git以及提交</a></li><li><a href="/git/delete-file/" class="sidebar-link">git教程二：删除项目</a></li><li><a href="/git/merge-rebase/" class="sidebar-link">git教程三：合并分支的两种方式</a></li><li><a href="/git/hard-soft/" class="active sidebar-link">git教程四：hard 和 soft</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul></div><div class="page"><div class="content"><h3 id="git教程四：hard-和-soft"><a href="#git教程四：hard-和-soft" aria-hidden="true" class="header-anchor">#</a> git教程四：hard 和 soft</h3><p>我们对一个文件做了多次修改，并每次都提交，但是这些都是同类功能，所以我们打算将多次提交合并，我们可以使用</p><div class="language-Shell extra-class"><pre class="language-text"><code>$ git reset --hard xxx
+$ git reset --soft xxx
+</code></pre></div><p>xxx表示版本号，这两个命令的区别如下</p><h4 id="hard"><a href="#hard" aria-hidden="true" class="header-anchor">#</a> hard</h4><p>我们对1.txt文件做了3次修改，每次增加的内容分别是123，456，789，提交之后log如下
+<img src="/assets/img/1.58e501a2.png" alt="img">
+然后我们执行<code>git reset --hard xxx</code>后，log如下
+<img src="/assets/img/2.7325e246.png" alt="img">
+文件内容如下，修改的内容没有了</p><p><img src="/assets/img/3.23e5fd3f.png" alt="img"></p><h4 id="soft"><a href="#soft" aria-hidden="true" class="header-anchor">#</a> soft</h4><p>我们对1.txt文件做了3次修改，每次增加的内容分别是123，456，789，提交之后log如下
+<img src="/assets/img/1.58e501a2.png" alt="img">
+然后我们执行<code>git reset --soft xxx</code>后，log如下
+没有add 123，456，789三次的提交了
+<img src="/assets/img/2.7325e246.png" alt="img">
+文件内容如下，三次增加的修改还在文件中
+<img src="/assets/img/4.1c50e831.png" alt="img"></p><p>执行<code>git commit -m 'add 123456789 to 1.txt'</code>现在只有一条提交记录</p><h4 id="总结"><a href="#总结" aria-hidden="true" class="header-anchor">#</a> 总结</h4><ul><li><p>相同点：都可以回退版本</p></li><li><p>不同点：hard不会保留修改记录，soft会保留修改记录</p></li><li><p>适用场景：</p><p>hard适合于舍弃已经开发并提交到版本的功能，就像时间线回到add 123之前；</p><p>soft适合多次提交的都是同类型的操作</p></li></ul></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/git/merge-rebase/" class="prev">
+          git教程三：合并分支的两种方式
+        </a></span><!----></p></div></div></div></div>
+    <script src="/assets/js/13.58ceeb45.js" defer></script><script src="/assets/js/app.d1770878.js" defer></script>
+  </body>
+</html>
