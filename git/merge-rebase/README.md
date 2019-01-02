@@ -55,6 +55,9 @@ $ git merge header // 合并分支header到master
 执行`git log`如下
 ![img](./6.png)
 
+#### 添加--no-ff参数
+两个命令后面添加`--no-ff`参数，表示不合并快照（Fast forward）
+
 #### merge vs rebase
 #####1. 步骤：
   merge 需要3步：add header，modify 1.txt， merge
@@ -75,3 +78,4 @@ rabase不会保留合并记录，看起来像是在master分支上继续开发�
 新建并切换xxx分支(上面两个命令合并)：`git checkout -b xxx`
 删除xxx分支：`git branch -D xxx`，若要删除xxx分支，必须先切换到其他分支才可以删除
 `git merge`会保留merge记录以及新建的分支，适用于功能性修改
+查看分支合并图：`git log --graph`

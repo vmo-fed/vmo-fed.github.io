@@ -34,5 +34,9 @@ $ cat ~/.ssh/id_rsa.pub
 
 完成～
 
-#### 从远程仓库拉代码到本地
+#### 克隆远程仓库拉代码到本地
 1. `git clone git@github.com:null-br/gitDemo.git`
+
+
+
+ps：`git remote -v`查看远程git仓库的信息
